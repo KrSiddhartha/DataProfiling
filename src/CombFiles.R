@@ -1,9 +1,9 @@
-combineFiles=function(directrory){
+combineFiles=function(directory){
   suppressMessages(require(plyr))
   suppressMessages(require(data.table))
   i=1
-  for(fls in list.files(directrory)){
-    fls_path = paste0(directrory,fls)
+  for(fls in list.files(directory)){
+    fls_path = paste0(directory,fls)
     if(i==1){
       print(paste0("Reading file no ",i))
       df = fread(fls_path, stringsAsFactors = F, na.strings = c(NA, ""))

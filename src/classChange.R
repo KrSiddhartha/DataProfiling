@@ -69,7 +69,7 @@ classChange = function(df, df_snap=NULL){
     if(class_change=="date"){
       result = tryCatch({
         df[[column]] = parse_date(df[[column]])
-        "successfully converted to date"
+        "successfully converted"
       }, warning = function(w) {
         "Unsuccessful, check data"
       }, error = function(e) {
